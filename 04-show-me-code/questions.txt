@@ -1,0 +1,64 @@
+1. Is JSX mandatory for React?
+
+No. JSX is not mandatory for react. It is an easy and more readable form of writing react. We can use React.createElement if we do not want to use JSX.
+
+2. Is ES6 mandatory for React?
+
+No. ES6 is not mandatory.
+
+3. {TitleComponent}vs{<TitleComponent/>}vs{<TitleComponent></TitleComponent>}
+
+{TitleComponent} -> is a React Element.
+
+
+<TitleComponent/> -> is a React Component that does not render any children. It can be interchangeably written as <TitleComponent></TitleComponent>.
+
+<TitleComponent></TitleComponent> -> is a React component and we can pass child components between the opening closing 'TitleComponent' tags.
+
+4. How can I write comment in JSX? 
+
+We have to enclose comments with {}. We can use '//' for singleline comments and '/* ..*/' for multiline comments with in the curlies.
+
+5. What is <React.Fragment></React.Fragment> and <></>?
+
+React requires the jsx to return a single top level component. Sometimes this forces us to wrap the returning jsx in a top level <div> which gets added to the DOM unnecessarily.
+
+<React.Fragment> can be used as the wrapping outer level tag. <React.Fragment> does not get added to the DOM.
+
+<></> is the short version of React.Fragment. 
+
+6. What is Virtual DOM?
+
+Virtual DOM is used by frontend frameworks like React to make DOM Manipulation efficient. React maintains it's own virtual representation of the UI. This copy is called Virtual dom.
+
+7. What is Reconciliation in React?
+
+Reconciliation is the process React uses to update the UI after a state or prop change. React uses diffing algorithm to compare the DOM Tree and the virtual DOM. If the same element is present
+at the same position between the old and new tree, React does not tear down the element. Instead it will only update the attribute. 
+
+If the elements are different then React will tear the entire tree below the element and reconstruct the tree.
+
+8. What is React Fiber?
+
+React Fiber is the new reconciliation enging in React 16. It increamentally renders the virtual DOM.
+
+9. Why we need Keys in React? When do we need Keys in React?
+
+When we render a list of items to the UI, React requires a unique key to be provided to each of the list items. When the list is modified React will compare the Keys and determine which of 
+the list items need to be changed.
+
+If we do not provide a key to a list of items, React will not be able to determine which of the list items has to be rerendered. Usually, top level component after a map function requires a key.
+
+10. Can we use index as keys in React?
+
+We must avoid using indexes as keys. In some rare scenarios indexes can be used as keys, but generally it is advised to use unique identifiers other than index.
+
+11. What is props in React? Ways to?
+
+Props are properties that a React component can accept and they are similar to attributes to HTML elements. React Components are functions and props is the argument all react components accept.
+We can use props to pass down information from the parent component to child component. We can list the individual properties inside the React componenet tags or we can use spread operator 
+and pass them inside the curly brackets like {...props}.
+
+12. What is config driven UI?
+
+Config driven UI uses the configuration provided to build the UI. It makes the code the readable and clean.
