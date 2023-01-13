@@ -1,0 +1,50 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.header {
+  border: 0px solid red;
+  background-color: bisque;
+}
+
+.header,
+.logo,
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  font-family: 'Moon Dance', cursive;
+}
+
+li {
+  list-style: none;
+  padding-right: 15px;
+}
+
+.list {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.restaurant {
+  width: 200px;
+  height: 200px;
+  border: solid 1px red;
+  padding: 10px;
+}
+
+.cuisine {
+  padding: 5px;
+  margin-right: 5px;
+  background-color: lightblue;
+  border-radius: 10px;
+}
