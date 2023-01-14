@@ -1,0 +1,65 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.header {
+  border: 0px solid red;
+  background-color: rgba(240, 128, 128, 0.568);
+}
+
+.header,
+.logo,
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  font-family: 'Moon Dance', cursive;
+}
+
+.form {
+  width: 50%;
+}
+.search {
+  width: 100%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 0.1rem solid midnightblue;
+}
+
+li {
+  list-style: none;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.list {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.restaurant {
+  width: 200px;
+  border: solid 1px red;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.cuisine {
+  padding: 1px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: rgb(182, 173, 230);
+  border-radius: 10px;
+  display: flex;
+  width: fit-content;
+  flex-flow: column;
+}
