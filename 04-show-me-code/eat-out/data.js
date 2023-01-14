@@ -1,4 +1,6 @@
-const restaurants = [
+import responseJson from './data.json';
+
+/* const restaurants = [
   {
     id: '001',
     img: '',
@@ -35,5 +37,11 @@ const restaurants = [
     stars: '4.8',
   },
 ];
+*/
 
+const restaurantData = responseJson.data.cards.filter(
+  (card) => card.cardType === 'seeAllRestaurants'
+);
+
+const restaurants = restaurantData[0].data.data.cards;
 export default restaurants;

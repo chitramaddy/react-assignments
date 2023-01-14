@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import restaurants from './data';
+import response from './data.json';
 import './app.css';
 
 const Header = () => {
@@ -17,12 +18,20 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = ({ name, id, location, stars, cuisines }) => {
+const RestaurantCard = ({
+  name,
+  id,
+  location,
+  cuisines,
+  avgRating,
+  slaString,
+}) => {
   return (
     <div className="restaurant" id={id}>
       <h2>{name}</h2>
       <p>{location}</p>
-      <p>{stars}</p>
+      <p>Rating: {avgRating} Stars</p>
+      <p>{slaString}</p>
       {cuisines.map((cuisine) => {
         return (
           <span className="cuisine" key={cuisine}>
@@ -39,12 +48,13 @@ const RestaurantList = ({ restaurants }) => {
     <div className="list">
       {restaurants.map((restaurant) => (
         <RestaurantCard
-          key={restaurant.id}
-          id={restaurant.id}
-          name={restaurant.name}
-          stars={restaurant.stars}
-          location={restaurant.location}
-          cuisines={restaurant.cuisines}
+          key={restaurant.data.id}
+          id={restaurant.data.id}
+          name={restaurant.data.name}
+          avgRating={restaurant.data.avgRating}
+          location={restaurant.data.area}
+          cuisines={restaurant.data.cuisines}
+          slaString={restaurant.data.slaString}
         />
       ))}
     </div>
