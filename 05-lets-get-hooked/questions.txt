@@ -1,0 +1,17 @@
+1. What is the difference between Named export, Default export and * as export?
+
+We can have only one default export per file. We can import the default import with any name.
+
+Named export is useful to export many values. We have to use the same name when importing the component.
+Ex: export const MyComponent;
+Ex: import { MyComponent } from './MyComponent';
+
+import * as AllComponents from "./Mycomponents" - is used to import all the named component onto an object. We can use any named component as follows:
+
+AllComponents.MyComponent1
+
+2. What is the importance of config.js file?
+
+3. What are React Hooks?
+
+4. Why do we need useState Hook?
