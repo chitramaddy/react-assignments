@@ -4,8 +4,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .header {
-  border: 0px solid red;
-  background-color: rgba(240, 128, 128, 0.568);
+  background-color: rgba(183, 225, 241, 0.89);
+  border-bottom: solid 1px green;
 }
 
 .header,
@@ -17,18 +17,21 @@ body {
 }
 
 .logo {
-  margin-left: 20px;
-  font-family: 'Moon Dance', cursive;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 5px;
 }
 
-.form {
-  width: 50%;
-}
 .search {
-  width: 100%;
-  padding: 5px;
+  text-align: center;
+  margin: 50px;
+}
+.searchInput {
+  width: 50%;
+  padding: 10px;
   border-radius: 15px;
-  border: 0.1rem solid midnightblue;
+  font-size: medium;
 }
 
 li {
@@ -43,7 +46,6 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 50px;
 }
 
 .restaurant {

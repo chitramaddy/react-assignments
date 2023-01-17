@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const Search = () => {
+export default Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = (e) => {
@@ -13,13 +13,11 @@ export const Search = () => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <input
-        className="search"
-        value={searchTerm}
-        placeholder="Search for a restaurant"
-        onChange={handleChange}
-      ></input>
-    </form>
+    <input
+      className="searchInput"
+      value={searchTerm}
+      placeholder="Search for a restaurant"
+      onChange={handleChange}
+    ></input>
   );
 };
