@@ -1,0 +1,150 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+.header {
+  background-color: #eeeeee;
+}
+
+.header,
+.logo,
+.nav {
+  padding: 0%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo,
+.login {
+  font-family: 'Roboto', sans-serif cursive;
+  margin-left: 5px;
+}
+
+.nav,
+.login {
+  margin: 1%;
+}
+.login {
+  background-color: #ff7f50;
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border-color: blanchedalmond;
+  cursor: pointer;
+}
+.login:hover {
+  background-color: white;
+}
+
+.footer {
+  height: 250px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  background-color: midnightblue;
+  color: orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.searchInput,
+.search-btn {
+  padding: 15px;
+  border-radius: 30px;
+  font-size: medium;
+}
+
+.searchInput {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.search-btn {
+  background-color: #ffb6c1;
+}
+
+li {
+  list-style: none;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.list {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.restaurant {
+  width: 200px;
+  border: solid 1px midnightblue;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.cuisine {
+  padding: 1px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: rgb(182, 173, 230);
+  border-radius: 10px;
+  display: flex;
+  width: fit-content;
+  flex-flow: column;
+}
+
+.shimmer {
+  display: flex;
+  width: 960px;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.shimmer-input {
+  width: 50%;
+  padding: 15px;
+  background-color: white;
+  border: solid 1px grey;
+  border-radius: 15px;
+}
+
+.shimmer-restaurant {
+  background-color: white;
+  border: solid 1px grey;
+  margin: 5px;
+  width: 200px;
+  -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300%
+    100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+}
+.shimmer-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+.shimmer-para {
+  background-color: beige;
+  margin: 1px;
+  padding: 10px;
+}
+
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import React from 'react';
 
@@ -13,9 +14,16 @@ export const Header = () => {
         </h1>
       </div>
       <ul className="nav">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/about">
+          <li>About</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
+
         <li>Cart</li>
       </ul>
       <button className="login" onClick={() => setIsLoggedIn(!isLoggedIn)}>
