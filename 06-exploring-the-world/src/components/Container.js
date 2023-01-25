@@ -48,7 +48,7 @@ export const Container = () => {
       </h2>
     );
 
-  return !error && allRestaurants.length === 0 ? (
+  return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="container">
@@ -57,9 +57,9 @@ export const Container = () => {
           className="searchInput"
           value={searchTerm}
           placeholder="Search for a restaurant"
-          onChange={(e) => handleChange(e)}
+          onChange={handleChange}
         ></input>
-        <button className="search-btn" onClick={(e) => onSubmit(e)}>
+        <button className="search-btn" onClick={onSubmit}>
           Search
         </button>
       </div>

@@ -18,7 +18,7 @@ export const Header = () => {
         <li>Contact</li>
         <li>Cart</li>
       </ul>
-      <button className="login" onClick={(e) => setIsLoggedIn(!isLoggedIn)}>
+      <button className="login" onClick={() => setIsLoggedIn(!isLoggedIn)}>
         {isLoggedIn ? 'Logout' : 'Login'}
       </button>
     </div>
