@@ -105,6 +105,11 @@ li {
   flex-flow: column;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
 .shimmer {
   display: flex;
   width: 960px;

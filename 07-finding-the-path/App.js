@@ -7,13 +7,14 @@ import { About } from './src/components/About';
 import { Contact } from './src/components/Contact';
 import { Error } from './src/components/Error';
 import '/app.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import RestaurantMenu from './src/components/RestaurantMenu';
 
 const App = () => {
   return (
     <>
       <Header />
-      <Container className="list" />
+      <Outlet />
       <Footer />
     </>
   );
@@ -24,14 +25,30 @@ const appRouter = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <Error />,
-  },
-  {
-    path: '/about',
-    element: <About />,
-  },
-  {
-    path: '/contact',
-    element: <Contact />,
+    children: [
+      {
+        path: '/',
+        element: <Container />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+        children: [
+          {
+            path: ':id',
+            element: <Container />,
+          },
+        ],
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
+        path: '/restaurant/:id',
+        element: <RestaurantMenu />,
+      },
+    ],
   },
 ]);
 
